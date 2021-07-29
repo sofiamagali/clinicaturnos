@@ -1,0 +1,22 @@
+//
+// Pages: turnos
+//
+.turnos {
+    td {
+        vertical-align: middle;
+    }
+    .list-inline {
+        margin-bottom: 0;
+    }
+    // table avatar
+    img.table-avatar,
+    .table-avatar img {
+        border-radius: 50%;
+        display: inline;
+        width: 2.5rem;
+    }
+    // Turnos state
+    .Turnos-state {
+        text-align: center;
+    }
+}
