@@ -48,7 +48,7 @@ if($verifica['dni'] == $dni){
 $_SESSION['dni']= $dni;
 $_SESSION['contraseña'] =$contraseña;
 
-header("location : index.php");
+header("location : turnos.php");
 
 
 

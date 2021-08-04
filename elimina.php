@@ -14,7 +14,7 @@ $lista2=mysqli_query($conexion,$cambiar);
 
 
 }
-header("Location: index.php");
+header("Location: turnos.php");
 
 
 ?>

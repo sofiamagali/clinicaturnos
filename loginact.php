@@ -25,7 +25,7 @@ if(!empty($_POST['usuario'])&& !empty($_POST['contraseña'])){
         $_SESSION['mail']=$verifica['mail'];
         $_SESSION['dni']=$verifica['dni'];
 
-        header("Location: index.php");
+        header("Location: turnos.php");
        }
     }
        else{

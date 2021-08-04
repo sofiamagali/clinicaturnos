@@ -59,7 +59,7 @@ include("cabeza.php");
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Obra Social</label>
-                    <input name="obrasocial" type="text" class="form-control" id="exampleInputPassword1" placeholder=<?php if(isset ($_SESSION['Obra Social'])){
+                    <input name="Obra_social" type="text" class="form-control" id="exampleInputPassword1" placeholder=<?php if(isset ($_SESSION['Obra Social'])){
                             echo $_SESSION['Obra Social'];
 
                         }

@@ -26,7 +26,7 @@ if(isset($_SESSION['dni'])&&(isset($_SESSION['contraseña']))){
     $verifica=(mysqli_fetch_array($lista));
 
     if(($verifica['dni'] == $dni)&&($verifica['contraseña'] == $contra)){
-        header("location : index.php");
+        header("location : turnos.php");
     }
 
     else{

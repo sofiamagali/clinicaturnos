@@ -28,8 +28,8 @@ if(isset($_GET["sexo"])){
         
         }
   //
-  if(isset($_GET["obrasocial"])){
-    $modifica="UPDATE pacientes SET   obra_social='$_GET[obrasocial]'  WHERE dni='$_SESSION[dni];'";
+  if(isset($_GET["Obra_social"])){
+    $modifica="UPDATE pacientes SET   obra_social='$_GET[Obra_social]'  WHERE dni='$_SESSION[dni];'";
     $lista=mysqli_query($conexion,$modifica);
     
     }

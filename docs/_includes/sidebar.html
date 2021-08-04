@@ -1,5 +1,5 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="{{'index.php' | absolute_url}}" class="brand-link logo-switch">
+    <a href="{{'turnos.php' | absolute_url}}" class="brand-link logo-switch">
         <img src="{{'assets/img/logo-xs.png' | absolute_url}}" alt="AdminLTE Docs Logo Small" class="brand-image-xl logo-xs">
         <img src="{{'assets/img/logo-xl.png' | absolute_url}}" alt="AdminLTE Docs Logo Large" class="brand-image-xs logo-xl" style="left: 12px">
     </a>
@@ -10,7 +10,7 @@
                 %}
 
                 <li class="nav-item {% if item.subitems %}has-treeview{% endif %} {% if subitem_active == 'true' %}menu-open{% endif %}">
-                    {% if item.url == 'index.php' %} {% assign item_url = '/' %} {% else %} {% assign item_url = '/' | append: item.url %} {% endif %}
+                    {% if item.url == 'turnos.php' %} {% assign item_url = '/' %} {% else %} {% assign item_url = '/' | append: item.url %} {% endif %}
 
                     <a href="{% if item.url %}{{item.url | absolute_url}}{% else %}#{% endif %}" class="nav-link {% if item_url == page.url %}active{% endif %}{% if subitem_active == 'true'%}active{% endif %}">
                         <i class="nav-icon {{item.icon}}"></i>
