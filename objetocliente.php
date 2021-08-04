@@ -7,48 +7,39 @@ class CLiente {
     public  $contraseña;
 
   //constructor
+    
+
     public function __construct($nombreycontra,$email,$dni,$contra){
-        $this -> nombreyApellido = $nombreycontra;
+       $this -> nombreyApellido = $nombreycontra;
         $this -> email = $email;
-        $this -> dni = $dni;
-        $this -> contraseña = $contra;
-    }
-
-
-    // funciones o metodos
-
-    public function mostrarValores(){
-        echo "Nombres y apellidos :".$this->nombreyApellido;
-        echo "<br>";
-        echo "Su dni es :".$this-> dni;
-        echo "<br>";
-        echo "Su email es: ".$this-> email;
-        echo "<br>";
-
+       $this -> dni = $dni;
+       $this -> contraseña = $contra;
+       session_start();
 
     }
 
-    public function mostrarturnos(){
-        $conexion = mysqli_connect("localhost","root","","hospital2"); 
-       
-        $list="SELECT cod_turno FROM turnos_dados where dni=$dni";
-        $lista=mysqli_query($conexion,$list); 
-
-        while($fila=mysqli_fetch_array($lista)){
-            //mostrar
-            
-
-        } 
-
-
-
+    public function iniciar($usuario){
+        $this -> nombreyApellido = $usuario['nombreyapellido'];
+        $this -> email = $usuario['mail'];
+       $this -> dni = $usuario['usuario'];
+       $this -> contraseña = $usuario['contraseña'];
     }
-    //gett y sett
 
-    public function setnota($nota){
-        $this -> nota = $nota;
-
+    public function getuser(){
+        return $_SESSION['user'];
     }
+
+    public function darnombre(){
+        return $this -> nombreyApellido;
+    }
+
+    
+    public function closesession(){
+        session_unset();
+        session_destroy();
+    }
+
+
 }
 
 ?>

@@ -1,31 +1,8 @@
 <?php 
-include("cabeza.html");
+include("cabeza.php");
 ?>
 
 
-<?php 
-$conexion = mysqli_connect("localhost","root","","hospital2");
-
-if(isset($_SESSION['dni'])&&(isset($_SESSION['contraseña']))){
-    $dni=$_SESSION['dni'];
-    $contra=$_SESSION['contraseña'];
-    $lista="SELECT dni,contraseña FROM pacientes WHERE dni=$dni AND contraseña=$contra";
-    $lista=mysqli_query($conexion,$lista);
-   
-    $verifica=(mysqli_fetch_array($lista));
-
-    if(($verifica['dni'] == $dni)&&($verifica['contraseña'] == $contra)){
-
-
-
-    }
-
-
-
-}
-
-
-?>
 <!-- Main content -->
 <section class="container">
 <section class="content">
@@ -51,25 +28,80 @@ if(isset($_SESSION['dni'])&&(isset($_SESSION['contraseña']))){
         <div class="card-body p-0">
             <table class="table table-striped turnos">
                 <tbody>
-                    <tr>
+                <?php
+                $conexion = mysqli_connect("localhost","root","","hospital2");               
+               $lista="SELECT * FROM turnos_dados WHERE dni='$_SESSION[dni]'";
+               $lista=mysqli_query($conexion,$lista);
+               $busca=(mysqli_fetch_array($lista));//esto es el turno
+
+               //ahora busca por codigo
+               $lista2="SELECT * FROM horario_medico WHERE cod_turno=$busca[cod_turno]";
+               $lista2=mysqli_query($conexion,$lista2);
+               $busca2=(mysqli_fetch_array($lista2));
+
+               //dame el nombre del medico
+               $lista3="SELECT nombreyapellido,matricula FROM medicos WHERE matricula='$busca2[matricula]'";
+               $lista3=mysqli_query($conexion,$lista3);
+               $medico=(mysqli_fetch_array($lista3));
+               //dame la profecion
+               $lista4="SELECT nombre_especialidad FROM especialidades WHERE cod_especialidad='$medico[matricula]'";
+               $listas=mysqli_query($conexion,$lista4);
+               $profecion=(mysqli_fetch_array($listas));
+
+               while ($busca=(mysqli_fetch_array($lista))){
+                // Imprimimos todos los nombres de la tabla miagenda
+                        echo '  <tr>
                         <td> # </td>
-                        <td>  <a> Clinico </a> </td>
-                        <td> <a> Juan Perez </a> </td>
+                        <td>  <a value='.$profecion["nombre_especialidad"].' > '.$profecion["nombre_especialidad"].' </a> </td>
+                        <td> <a  value= '.$medico["nombreyapellido"].'> '.$medico["nombreyapellido"].' </a> </td>
                         <td class="Turnos_progress">
                             <div class="progress progress-sm">
                             </div>
-                            <small>   10/5/2021        </small>
+                            <small  value='.$busca2["fecha"].' >     '.$busca2["fecha"].'     </small>
                         </td>
                         <td class="Turnos-state">
-                            <span class="badge badge-success">10:30</span>
+                            <span class="badge badge-success" value='.$busca2["hora"].' >'.$busca2["hora"].'</span>
                         </td>
-                        <td class="Turnos-actions text-right">
-                            <a class="btn btn-danger btn-sm" href="#">
-                                <i class="fas fa-trash">
-                                  </i> Delete
-                            </a>
-                        </td>
-                    </tr>
+                    <td  class="Turnos-actions text-right">
+                    <a class="btn btn-danger btn-sm" href="elimina.php?id='.$busca["cod_turno"].'">
+                        <i class="fas fa-trash">
+                        </i> Delete
+                    </a>
+                </td>
+                </tr>
+                
+                ';
+ 
+                //ahora busca por codigo
+                $lista2="SELECT * FROM horario_medico WHERE cod_turno=$busca[cod_turno]";
+                $lista2=mysqli_query($conexion,$lista2);
+                $busca2=(mysqli_fetch_array($lista2));
+ 
+                //dame el nombre del medico
+                $lista3="SELECT nombreyapellido,matricula FROM medicos WHERE matricula='$busca2[matricula]'";
+                $lista3=mysqli_query($conexion,$lista3);
+                $medico=(mysqli_fetch_array($lista3));
+                //dame la profecion
+                $lista4="SELECT nombre_especialidad FROM especialidades WHERE cod_especialidad='$medico[matricula]'";
+                $listas=mysqli_query($conexion,$lista4);
+                $profecion=(mysqli_fetch_array($listas));
+                
+        }
+
+
+                
+                
+                
+                
+                ?>
+
+
+
+
+
+
+
+                 
                    
         </div>
         <!-- /.card -->

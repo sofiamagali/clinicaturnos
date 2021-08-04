@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,15 +64,15 @@
                     <li class="nav-item dropdown user-menu">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                             <img src="img/user.png" class="user-image img-circle elevation-2" alt="User Image">
-                            <span class="d-none d-md-inline">Alexander Pierce</span>
+                            <span href="perfil.php" class="d-none d-md-inline"><?php echo $_SESSION['nombreyapellido']; ?></span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                             <!-- User image -->
                             <li class="user-header bg-primary">
-                                <img src="img/user.png" class="img-circle elevation-2" alt="User Image">
+                                <img href="perfil.php" src="img/user.png" class="img-circle elevation-2" alt="User Image">
 
                                 <p>
-                                    Alexander Pierce
+                                <?php echo $_SESSION['nombreyapellido']; ?>
 
                                 </p>
                             </li>
@@ -78,7 +82,7 @@
                     </li>
                     <!-- Menu Footer-->
                     <li class="user-footer">
-                        <a href="#" class="btn btn-default btn-flat">Perfil</a>
+                        <a href="perfil.php" class="btn btn-default btn-flat">Perfil</a>
                         <a href="loginact.html" class="btn btn-default btn-flat float-right">Cerrar Sesion</a>
                     </li>
                     </ul>
@@ -104,7 +108,7 @@
                         <img src=img/user.png class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Alexander Pierce</a>
+                        <a href="#" class="d-block"><?php echo $_SESSION['nombreyapellido']; ?></a>
                     </div>
                 </div>
 
@@ -167,7 +171,7 @@
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                                <li class="breadcrumb-item active">Turnos</li>
+                                <li class="breadcrumb-item active">Turnos medicos </li>
                             </ol>
                         </div>
                     </div>

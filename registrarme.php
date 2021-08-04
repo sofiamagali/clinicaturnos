@@ -1,12 +1,11 @@
 <?php
 
-
 //agregar persona
 //elementos que recibo
 $nombreyape = $_GET["nombreyape"];
 $dni =$_GET["dni"];
-$email =$_GET["email"];
-$contraseña =$_GET["pass"];
+$mail =$_GET["email"];
+$contraseña = $_GET["contraseña"];
 
 
 
@@ -24,7 +23,7 @@ if(mysqli_connect_errno()){
 }
 
 // si no existe el user agrega en bd
-$lista="SELECT dni FROM pacientes WHERE dni=$dni ";
+$lista="SELECT dni FROM pacientes WHERE dni='$dni' ";
 $lista=mysqli_query($conexion,$lista);
 
 echo var_dump($lista);
@@ -37,7 +36,7 @@ echo $verifica['dni'];
 if($verifica['dni'] == $dni){
     echo "ya se encuentra registrado en el sistema";
 }else{
-    $sql = "INSERT INTO `pacientes` (`nombreyapellido`,`contraseña`,`dni`) VALUES ('$nombreyape', '$contraseña',$dni)";
+    $sql = "INSERT INTO `pacientes` (`nombreyapellido`,`contraseña`,`dni`,`mail`) VALUES ('$nombreyape', '$contraseña','$dni','$mail')";
     $lista=mysqli_query($conexion,$sql);
     echo "se agrego";
 }
@@ -48,7 +47,6 @@ if($verifica['dni'] == $dni){
 
 $_SESSION['dni']= $dni;
 $_SESSION['contraseña'] =$contraseña;
-
 
 header("location : index.php");
 

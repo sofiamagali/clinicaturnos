@@ -1,5 +1,5 @@
 <?php 
-include("cabeza.html");
+include("cabeza.php");
 ?>
 
 <!-- Main content -->
@@ -48,16 +48,16 @@ if($medico['vigente']=='s'){
         $horaprimera=$busca['hora'];//primer horario
         if($busca['disponible'] == 's' ){ //si encuentra 
             
-            echo '<br> <input type="radio" name="fecha" value="">'.$busca["fecha"].'';
-            echo '<p name="hora">'.$busca["hora"].'</p>';
+            echo '<br> <input type="radio" name="fecha" value="'.$busca["fecha"].'">'.$busca["fecha"].'';
+            echo '<input type="radio" name="hora" value="'.$busca["hora"].'" >'.$busca["hora"].'';
             
             $comprobar="SELECT * FROM horario_medico where matricula='$medicoelegido' AND fecha > '$diahoy' and hora>'$horaprimera'";
             $comprobar=mysqli_query($conexion,$comprobar);
             $busca=(mysqli_fetch_array($comprobar));
 
-            while(($busca['disponible']== 's')&&($busca['fecha']=$fechaprimera)&&(! empty($busca))){
-                echo '<br> <input type="radio" name="fecha" value="">'.$busca["fecha"].'';
-                echo '<p name="hora">'.$busca["hora"].'</p>';
+            while((! empty($busca)&&($busca['disponible']== 's')&&($busca['fecha']=$fechaprimera))){
+                echo '<br> <input type="radio" name="fecha" value="'.$busca["fecha"].'">'.$busca["fecha"].'';
+                echo '<input type="radio" name="hora" value="'.$busca["hora"].'" >'.$busca["hora"].'';
                 $comprobar="SELECT * FROM horario_medico where matricula='$medicoelegido' AND fecha = '$fechaprimera' and hora>'$horaprimera'";
                 $comprobar=mysqli_query($conexion,$comprobar);
                 $busca=(mysqli_fetch_array($comprobar));
@@ -70,31 +70,24 @@ if($medico['vigente']=='s'){
             echo "<h1> No hay turnos disponibles momentaneamente.</h1>";
 
         } 
-
-
-        //quedamos a la espera de si se elije o no el turno mostrado en pantalla
-
-
     }
-else echo '<p>medico no disponible momentaneamente,comuniquese al numero interno.</p>'
+else echo '<p>medico no disponible momentaneamente,comuniquese al numero interno.</p>';
 
 ?>
-
-
         <div class="card-footer">
-          <button type="sumbit" class="btn btn-primary" >selec </button>                                 
+          <button type="enviar" class="btn btn-primary" >Confirmar turno </button>                                 
         </div>
-                                    
-        <div class="card-footer">
-             <button  type="submit" class="btn btn-primary">Dia siguiente</button>
+                                
+         </form> 
+                    <div class="card-footer">
+             <button  type="buscadis" class="btn btn-primary">Dia siguiente</button>
         </div>
-
-
-
-                    </form>
                     </div>
                     </div>
                     </div>
+    </div>
+</section>
+
  <?php 
 include("footer.html");
 ?>

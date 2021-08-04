@@ -1,5 +1,5 @@
 <?php 
-include("cabeza.html");
+include("cabeza.php");
 ?>
 
 <!-- Main content -->
