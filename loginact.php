@@ -65,7 +65,7 @@ if(!empty($_POST['usuario'])&& !empty($_POST['contraseña'])){
             </div>
 
             <!-- Login Form -->
-            <form action="loginact.php" method="post">
+            <form action="index.php" method="post">
                 <input type="text" id="login" class="fadeIn second" name="usuario" placeholder="Usuario/Dni">
                 <input type="text" id="password" class="fadeIn third" name="contraseña" placeholder="Contraseña">
                 <input type="submit" name="sumbit" class="fadeIn fourth" value="Ingresar">

@@ -73,7 +73,7 @@ session_start();
                     <!-- Menu Footer-->
                     <li class="user-footer">
                         <a href="perfil.php" class="btn btn-default btn-flat">Perfil</a>
-                        <a href="loginact.php" class="btn btn-default btn-flat float-right">Cerrar Sesion</a>
+                        <a href="index.php" class="btn btn-default btn-flat float-right">Cerrar Sesion</a>
                     </li>
                     </ul>
                     </li>
@@ -133,7 +133,7 @@ session_start();
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="index.php" class="nav-link">
+                            <a href="index2.php" class="nav-link">
                                 <i class="nav-icon fas fa-hospital"></i>
                                 <p>
                                     Clinica Salud
