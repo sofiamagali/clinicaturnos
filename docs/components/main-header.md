@@ -32,16 +32,16 @@ The main header contains the navbar. Construction of the navbar differs slightly
         Help
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">FAQ</a>
-        <a class="dropdown-item" href="#">Support</a>
+        <a   href="#">FAQ</a>
+        <a   href="#">Support</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Contact</a>
+        <a   href="#">Contact</a>
       </div>
     </li>
   </ul>
 
   <!-- SEARCH FORM -->
-  <form class="form-inline ml-3">
+  <form  >
     <div class="input-group input-group-sm">
       <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
       <div class="input-group-append">
@@ -61,7 +61,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
         <span class="badge badge-danger navbar-badge">3</span>
       </a>
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <a href="#" class="dropdown-item">
+        <a href="#"  >
           <!-- Message Start -->
           <div class="media">
             <img src="{{'assets/img/user1-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -77,7 +77,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
           <!-- Message End -->
         </a>
         <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
+        <a href="#"  >
           <!-- Message Start -->
           <div class="media">
             <img src="{{'assets/img/user8-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -93,7 +93,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
           <!-- Message End -->
         </a>
         <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
+        <a href="#"  >
           <!-- Message Start -->
           <div class="media">
             <img src="{{'assets/img/user3-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -121,17 +121,17 @@ The main header contains the navbar. Construction of the navbar differs slightly
       <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
         <span class="dropdown-header">15 Notifications</span>
         <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
+        <a href="#"  >
           <i class="fas fa-envelope mr-2"></i> 4 new messages
           <span class="float-right text-muted text-sm">3 mins</span>
         </a>
         <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
+        <a href="#"  >
           <i class="fas fa-users mr-2"></i> 8 friend requests
           <span class="float-right text-muted text-sm">12 hours</span>
         </a>
         <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
+        <a href="#"  >
           <i class="fas fa-file mr-2"></i> 3 new reports
           <span class="float-right text-muted text-sm">2 days</span>
         </a>
@@ -165,16 +165,16 @@ The main header contains the navbar. Construction of the navbar differs slightly
           Help
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">FAQ</a>
-          <a class="dropdown-item" href="#">Support</a>
+          <a   href="#">FAQ</a>
+          <a   href="#">Support</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Contact</a>
+          <a   href="#">Contact</a>
         </div>
       </li>
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <form  >
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -194,7 +194,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <!-- Message Start -->
             <div class="media">
               <img src=img/user.png alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -210,7 +210,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <!-- Message Start -->
             <div class="media">
               <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -226,7 +226,7 @@ The main header contains the navbar. Construction of the navbar differs slightly
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <!-- Message Start -->
             <div class="media">
               <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -254,17 +254,17 @@ The main header contains the navbar. Construction of the navbar differs slightly
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-header">15 Notifications</span>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <i class="fas fa-envelope mr-2"></i> 4 new messages
             <span class="float-right text-muted text-sm">3 mins</span>
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <i class="fas fa-users mr-2"></i> 8 friend requests
             <span class="float-right text-muted text-sm">12 hours</span>
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <i class="fas fa-file mr-2"></i> 3 new reports
             <span class="float-right text-muted text-sm">2 days</span>
           </a>
@@ -314,15 +314,15 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
           Help
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">FAQ</a>
-          <a class="dropdown-item" href="#">Support</a>
+          <a   href="#">FAQ</a>
+          <a   href="#">Support</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Contact</a>
+          <a   href="#">Contact</a>
         </div>
       </li>
     </ul>
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <form  >
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
         <div class="input-group-append">
@@ -341,7 +341,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
           <span class="badge badge-danger navbar-badge">3</span>
         </a>
        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <!-- Message Start -->
             <div class="media">
               <img src="{{'assets/img/user1-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -357,7 +357,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <!-- Message Start -->
             <div class="media">
               <img src="{{'assets/img/user8-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -373,7 +373,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
             <!-- Message End -->
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <!-- Message Start -->
             <div class="media">
               <img src="{{'assets/img/user3-128x128.jpg' | relative_url}}" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -401,17 +401,17 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
           <span class="dropdown-header">15 Notifications</span>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <i class="fas fa-envelope mr-2"></i> 4 new messages
             <span class="float-right text-muted text-sm">3 mins</span>
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <i class="fas fa-users mr-2"></i> 8 friend requests
             <span class="float-right text-muted text-sm">12 hours</span>
           </a>
           <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
+          <a href="#"  >
             <i class="fas fa-file mr-2"></i> 3 new reports
             <span class="float-right text-muted text-sm">2 days</span>
           </a>
@@ -451,16 +451,16 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
             Help
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">FAQ</a>
-            <a class="dropdown-item" href="#">Support</a>
+            <a   href="#">FAQ</a>
+            <a   href="#">Support</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Contact</a>
+            <a   href="#">Contact</a>
           </div>
         </li>
       </ul>
 
       <!-- SEARCH FORM -->
-      <form class="form-inline ml-3">
+      <form  >
         <div class="input-group input-group-sm">
           <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
           <div class="input-group-append">
@@ -480,7 +480,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
             <span class="badge badge-danger navbar-badge">3</span>
           </a>
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <a href="#" class="dropdown-item">
+            <a href="#"  >
               <!-- Message Start -->
               <div class="media">
                 <img src=img/user.png alt="User Avatar" class="img-size-50 mr-3 img-circle">
@@ -496,7 +496,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
               <!-- Message End -->
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="#"  >
               <!-- Message Start -->
               <div class="media">
                 <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -512,7 +512,7 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
               <!-- Message End -->
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="#"  >
               <!-- Message Start -->
               <div class="media">
                 <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
@@ -540,17 +540,17 @@ Top navbar example can be found in this [demo page](https://adminlte.io/themes/d
           <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
             <span class="dropdown-header">15 Notifications</span>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="#"  >
               <i class="fas fa-envelope mr-2"></i> 4 new messages
               <span class="float-right text-muted text-sm">3 mins</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="#"  >
               <i class="fas fa-users mr-2"></i> 8 friend requests
               <span class="float-right text-muted text-sm">12 hours</span>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="#" class="dropdown-item">
+            <a href="#"  >
               <i class="fas fa-file mr-2"></i> 3 new reports
               <span class="float-right text-muted text-sm">2 days</span>
             </a>
